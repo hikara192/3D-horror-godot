@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnxpwlnko8ey0"]
+
+[ext_resource type="PackedScene" uid="uid://dfg6fsw88x7oi" path="res://Pizzeria/Models/Pizzeria_Props.fbx" id="1_j7be0"]
+
+[node name="Pizzeria_Props" instance=ExtResource("1_j7be0")]

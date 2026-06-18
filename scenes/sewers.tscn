@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cabbyqqa1y1p8"]
+
+[ext_resource type="PackedScene" uid="uid://bwrcebafhnjay" path="res://res/Sewer/Models/Sewers.fbx" id="1_a4l0j"]
+
+[node name="Sewers" instance=ExtResource("1_a4l0j")]
+
+[node name="Trash_005" parent="." index="72"]
+transform = Transform3D(1.78814e-05, -1.49012e-05, 100, -99.9288, -3.77183, 8.9407e-06, 3.77184, -99.9288, 0, 13.4206, 0.499247, 99.5907)

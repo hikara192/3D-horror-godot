@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dghedmscbdnqp"
+path.s3tc="res://.godot/imported/Pizzeria_Scene_Office_Ceiling.jpg-72e7f2e049b3818f5a548df5cf934436.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "b2167cc256d4212dd80c437b45314704"
+}
+
+[deps]
+
+source_file="res://Pizzeria/Models/Pizzeria_Scene_Office_Ceiling.jpg"
+dest_files=["res://.godot/imported/Pizzeria_Scene_Office_Ceiling.jpg-72e7f2e049b3818f5a548df5cf934436.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
