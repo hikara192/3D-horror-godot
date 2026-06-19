@@ -34,6 +34,30 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
+"PATH:B_Mayonnaise": {
+"generate/physics": true
+},
+"PATH:B_ketchup": {
+"generate/physics": true
+},
+"PATH:B_mustard": {
+"generate/physics": true
+},
+"PATH:Can_Soda": {
+"generate/physics": true
+},
+"PATH:Can_Soda_001": {
+"generate/physics": true
+},
+"PATH:Can_Soda_002": {
+"generate/physics": true
+},
+"PATH:Can_Soda_003": {
+"generate/physics": true
+},
+"PATH:Cube": {
+"generate/physics": true
+},
 "PATH:Dough_mixer/Dough_mixer_002": {
 "generate/physics": true
 },
@@ -43,6 +67,12 @@ _subresources={
 "PATH:Pizza_oven": {
 "generate/physics": true
 },
+"PATH:Preparation_table_018": {
+"generate/physics": true
+},
+"PATH:Preparation_table_020": {
+"generate/physics": true
+},
 "PATH:Refrigerator": {
 "generate/physics": true
 },
@@ -50,6 +80,78 @@ _subresources={
 "generate/physics": true
 },
 "PATH:Road_001": {
+"generate/physics": true
+},
+"PATH:building_01": {
+"generate/physics": true
+},
+"PATH:building_02": {
+"generate/physics": true
+},
+"PATH:building_03": {
+"generate/physics": true
+},
+"PATH:building_04": {
+"generate/physics": true
+},
+"PATH:building_05": {
+"generate/physics": true
+},
+"PATH:building_06": {
+"generate/physics": true
+},
+"PATH:building_07": {
+"generate/physics": true
+},
+"PATH:building_08": {
+"generate/physics": true
+},
+"PATH:building_09": {
+"generate/physics": true
+},
+"PATH:building_11": {
+"generate/physics": true
+},
+"PATH:building_12": {
+"generate/physics": true
+},
+"PATH:building_13": {
+"generate/physics": true
+},
+"PATH:building_14": {
+"generate/physics": true
+},
+"PATH:building_15": {
+"generate/physics": true
+},
+"PATH:building_16": {
+"generate/physics": true
+},
+"PATH:building_17": {
+"generate/physics": true
+},
+"PATH:building_18": {
+"generate/physics": true
+},
+"PATH:building_19": {
+"generate/physics": true
+},
+"PATH:building_20": {
+"generate/physics": true
+},
+"PATH:building_21": {
+"generate/physics": true
+},
+"PATH:cash_register": {
+"generate/physics": true
+},
+"PATH:streetlight": {
+"generate/physics": true
+},
+"PATH:traffic_light": {
+"generate/physics": true
+},
+"PATH:washbasin": {
 "generate/physics": true
 }
 }

@@ -3,3 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://dfg6fsw88x7oi" path="res://Pizzeria/Models/Pizzeria_Props.fbx" id="1_j7be0"]
 
 [node name="Pizzeria_Props" instance=ExtResource("1_j7be0")]
+
+[node name="traffic_light" parent="." index="66"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -3.14914, 0.400648, -0.732341)
