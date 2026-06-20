@@ -1,0 +1,143 @@
+[gd_scene load_steps=6 format=3 uid="uid://c35eqhqa0lgtf"]
+
+[ext_resource type="PackedScene" uid="uid://c1lmrcaqiisxg" path="res://DoriHome.fbx" id="1_1vxh1"]
+[ext_resource type="Script" uid="uid://51gm5f5tlxby" path="res://scenes/door.gd" id="2_13na2"]
+[ext_resource type="Script" uid="uid://daxdtm046pf25" path="res://player.gd" id="2_ksia2"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_13na2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_frlj6"]
+
+[node name="DoriHome" instance=ExtResource("1_1vxh1")]
+transform = Transform3D(1.351, 0, 0, 0, 1.351, 0, 0, 0, 1.351, 0, 0, 0)
+
+[node name="cabinet_001" parent="." index="0"]
+transform = Transform3D(104.989, 0, 0, 0, -1.25157e-05, 104.989, 0, -104.989, -1.25157e-05, -8.65, 0, -16.06)
+
+[node name="guitar" parent="." index="87"]
+transform = Transform3D(-3.04453, -80.7752, -11.7124, -1.84824, -11.6493, 80.8206, -81.599, 3.27765, -1.39361, -5.6, 0, 0.7)
+
+[node name="wdw_002" parent="." index="97"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.00447896, 0, 0)
+
+[node name="wdw_004" parent="." index="99"]
+transform = Transform3D(80.3898, -59.4767, 2.97466e-06, -2.98023e-06, 0, 100, -59.4767, -80.3898, 1.82146e-07, 2.5, 1.96324, 3)
+
+[node name="drawer" parent="." index="100"]
+transform = Transform3D(0, 100, 2.98023e-06, 2.98023e-06, 0, 100, 100, 2.98023e-06, 0, 3.68, -0.055594, -1.1)
+
+[node name="Plane_001" parent="Door" index="0"]
+script = ExtResource("2_13na2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="133"]
+transform = Transform3D(0.740194, 0, 0, 0, 0.709797, 0.209941, 0, -0.209941, 0.709797, 0, 4.12102, 6.88812)
+
+[node name="Node3D" type="Node3D" parent="." index="134"]
+
+[node name="Player" type="CharacterBody3D" parent="Node3D" index="0"]
+transform = Transform3D(0.868397, 0, 0, 0, 0.956336, 0, 0, 0, 0.83323, 0.00826294, 0.943004, 0.252918)
+script = ExtResource("2_ksia2")
+
+[node name="Camera3D" type="Camera3D" parent="Node3D/Player" index="0"]
+transform = Transform3D(0.316309, 0, 0, 0, 0.316308, 0, 0, 0, 0.316309, 0, 0.473551, 0)
+fov = 80.0385
+
+[node name="InteractionRay" type="RayCast3D" parent="Node3D/Player/Camera3D" index="0"]
+target_position = Vector3(0, 0, -3)
+
+[node name="Flashlight" type="SpotLight3D" parent="Node3D/Player/Camera3D" index="1"]
+visible = false
+spot_range = 15.157
+spot_angle = 35.0
+
+[node name="PlayeMesh" type="MeshInstance3D" parent="Node3D/Player" index="1"]
+mesh = SubResource("CapsuleMesh_13na2")
+
+[node name="PlayerCollisionShape" type="CollisionShape3D" parent="Node3D/Player" index="2"]
+shape = SubResource("CapsuleShape3D_frlj6")
+
+[node name="InventoryUI" type="CanvasLayer" parent="Node3D/Player" index="3"]
+
+[node name="Hotbar" type="HBoxContainer" parent="Node3D/Player/InventoryUI" index="0"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Slot1" type="Panel" parent="Node3D/Player/InventoryUI/Hotbar" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Node3D/Player/InventoryUI/Hotbar/Slot1" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot5" type="Panel" parent="Node3D/Player/InventoryUI/Hotbar" index="1"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Node3D/Player/InventoryUI/Hotbar/Slot5" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot4" type="Panel" parent="Node3D/Player/InventoryUI/Hotbar" index="2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Node3D/Player/InventoryUI/Hotbar/Slot4" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot3" type="Panel" parent="Node3D/Player/InventoryUI/Hotbar" index="3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Node3D/Player/InventoryUI/Hotbar/Slot3" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot2" type="Panel" parent="Node3D/Player/InventoryUI/Hotbar" index="4"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Node3D/Player/InventoryUI/Hotbar/Slot2" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BatteryLabel" type="Label" parent="Node3D/Player/InventoryUI" index="1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 4

@@ -1,0 +1,269 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c1lmrcaqiisxg"
+path="res://.godot/imported/DoriHome.fbx-2cc2496a27b1398d1e2d0342cd1e23e7.scn"
+
+[deps]
+
+source_file="res://DoriHome.fbx"
+dest_files=["res://.godot/imported/DoriHome.fbx-2cc2496a27b1398d1e2d0342cd1e23e7.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Bed": {
+"generate/physics": true
+},
+"PATH:Bed/Cube": {
+"generate/physics": true
+},
+"PATH:Bed/Cube_001": {
+"generate/physics": true
+},
+"PATH:Bed/Cube_002": {
+"generate/physics": true
+},
+"PATH:Bed/Cube_003": {
+"generate/physics": true
+},
+"PATH:Circle_010": {
+"generate/physics": true
+},
+"PATH:Circle_011": {
+"generate/physics": true
+},
+"PATH:Cube_050": {
+"generate/physics": true
+},
+"PATH:Cube_051": {
+"generate/physics": true
+},
+"PATH:Cube_052": {
+"generate/physics": true
+},
+"PATH:Cube_053": {
+"generate/physics": true
+},
+"PATH:Cube_054": {
+"generate/physics": true
+},
+"PATH:Cube_055": {
+"generate/physics": true
+},
+"PATH:Door": {
+"generate/physics": true
+},
+"PATH:Door/Plane_001": {
+"generate/physics": true
+},
+"PATH:Plane_008": {
+"generate/physics": true
+},
+"PATH:Plane_008/Plane_009": {
+"generate/physics": true
+},
+"PATH:Plane_010": {
+"generate/physics": true
+},
+"PATH:Plane_010/Plane_011": {
+"generate/physics": true
+},
+"PATH:Plane_012": {
+"generate/physics": true
+},
+"PATH:Plane_013": {
+"generate/physics": true
+},
+"PATH:backpack": {
+"generate/physics": true
+},
+"PATH:bag": {
+"generate/physics": true
+},
+"PATH:bath": {
+"generate/physics": true
+},
+"PATH:bathcab": {
+"generate/physics": true
+},
+"PATH:bathcab_001": {
+"generate/physics": true
+},
+"PATH:bathcab_002": {
+"generate/physics": true
+},
+"PATH:bathcab_003": {
+"generate/physics": true
+},
+"PATH:broom": {
+"generate/physics": true
+},
+"PATH:bulb2": {
+"generate/physics": true
+},
+"PATH:chair": {
+"generate/physics": true
+},
+"PATH:closet": {
+"generate/physics": true
+},
+"PATH:curtain": {
+"generate/physics": true
+},
+"PATH:desk": {
+"generate/physics": true
+},
+"PATH:desk/Cube_010": {
+"generate/physics": true
+},
+"PATH:desk/Cube_011": {
+"generate/physics": true
+},
+"PATH:desk/Cube_012": {
+"generate/physics": true
+},
+"PATH:drawer": {
+"generate/physics": true
+},
+"PATH:drawer/Cube_021": {
+"generate/physics": true
+},
+"PATH:drawer/Cube_022": {
+"generate/physics": true
+},
+"PATH:drawer/Cube_023": {
+"generate/physics": true
+},
+"PATH:drawer/Cube_024": {
+"generate/physics": true
+},
+"PATH:drawer/Cube_025": {
+"generate/physics": true
+},
+"PATH:drawer/Cube_026": {
+"generate/physics": true
+},
+"PATH:floor": {
+"generate/physics": true
+},
+"PATH:guitar": {
+"generate/physics": true
+},
+"PATH:hanger": {
+"generate/physics": true
+},
+"PATH:laundry": {
+"generate/physics": true
+},
+"PATH:laundry_001": {
+"generate/physics": true
+},
+"PATH:laundry_001/valve": {
+"generate/physics": true
+},
+"PATH:lightbulb": {
+"generate/physics": true
+},
+"PATH:lightbulb_001": {
+"generate/physics": true
+},
+"PATH:meson": {
+"generate/physics": true
+},
+"PATH:meson/Cube_005": {
+"generate/physics": true
+},
+"PATH:meson/Cube_006": {
+"generate/physics": true
+},
+"PATH:meson/Cube_007": {
+"generate/physics": true
+},
+"PATH:meson/Cube_008": {
+"generate/physics": true
+},
+"PATH:meson/Plane_002": {
+"generate/physics": true
+},
+"PATH:meson/Plane_003": {
+"generate/physics": true
+},
+"PATH:painting": {
+"generate/physics": true
+},
+"PATH:painting_001": {
+"generate/physics": true
+},
+"PATH:painting_002": {
+"generate/physics": true
+},
+"PATH:painting_003": {
+"generate/physics": true
+},
+"PATH:parlant_001": {
+"generate/physics": true
+},
+"PATH:shoerack": {
+"generate/physics": true
+},
+"PATH:techo": {
+"generate/physics": true
+},
+"PATH:wall": {
+"generate/physics": true
+},
+"PATH:wall_001": {
+"generate/physics": true
+},
+"PATH:walls": {
+"generate/physics": true
+},
+"PATH:washbasin": {
+"generate/physics": true
+},
+"PATH:washingmach": {
+"generate/physics": true
+},
+"PATH:wdw": {
+"generate/physics": true
+},
+"PATH:wdw_001": {
+"generate/physics": true
+},
+"PATH:wdw_002": {
+"generate/physics": true
+},
+"PATH:wdw_003": {
+"generate/physics": true
+},
+"PATH:wdw_004": {
+"generate/physics": true
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1

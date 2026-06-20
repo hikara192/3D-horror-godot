@@ -1,0 +1,127 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbxiwamvgph88"]
+
+[ext_resource type="PackedScene" uid="uid://b0d8itcs5df4j" path="res://2000s_room_with_sega_mega_drive.glb" id="1_d66cu"]
+[ext_resource type="Script" uid="uid://daxdtm046pf25" path="res://player.gd" id="2_cos8h"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qx7tl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nrnpp"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_d66cu")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="0"]
+transform = Transform3D(1.12526, 0, 0, 0, 1.12526, 0, 0, 0, 1.12526, 0, 2.4505, 0)
+
+[node name="Sketchfab_model" parent="." index="1"]
+transform = Transform3D(1.86868, 0, 0, 0, 4.1493e-16, 1.86868, 0, -1.86868, 4.1493e-16, 0, 0, 0)
+
+[node name="Object_202" parent="Sketchfab_model/root/GLTF_SceneRootNode/Room Base_90" index="0"]
+transform = Transform3D(0.999963, -1.69796e-22, 0.00867433, 1.71333e-22, 1, -1.764e-22, -0.00867433, 1.7788e-22, 0.999963, -0.044207, 0.00808465, -0.0144023)
+
+[node name="Player" type="CharacterBody3D" parent="." index="2"]
+transform = Transform3D(1.73058, 0, 0, 0, 1.5598, 0, 0, 0, 1.74591, 0.00826294, 1.63803, 0.0170803)
+script = ExtResource("2_cos8h")
+
+[node name="Camera3D" type="Camera3D" parent="Player" index="0"]
+transform = Transform3D(0.316309, 0, 0, 0, 0.316308, 0, 0, 0, 0.316309, 0, 0.473551, 0)
+fov = 80.0385
+
+[node name="InteractionRay" type="RayCast3D" parent="Player/Camera3D" index="0"]
+target_position = Vector3(0, 0, -3)
+
+[node name="Flashlight" type="SpotLight3D" parent="Player/Camera3D" index="1"]
+visible = false
+spot_range = 15.157
+spot_angle = 35.0
+
+[node name="PlayeMesh" type="MeshInstance3D" parent="Player" index="1"]
+mesh = SubResource("CapsuleMesh_qx7tl")
+
+[node name="PlayerCollisionShape" type="CollisionShape3D" parent="Player" index="2"]
+shape = SubResource("CapsuleShape3D_nrnpp")
+
+[node name="InventoryUI" type="CanvasLayer" parent="Player" index="3"]
+
+[node name="Hotbar" type="HBoxContainer" parent="Player/InventoryUI" index="0"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Slot1" type="Panel" parent="Player/InventoryUI/Hotbar" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player/InventoryUI/Hotbar/Slot1" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot5" type="Panel" parent="Player/InventoryUI/Hotbar" index="1"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player/InventoryUI/Hotbar/Slot5" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot4" type="Panel" parent="Player/InventoryUI/Hotbar" index="2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player/InventoryUI/Hotbar/Slot4" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot3" type="Panel" parent="Player/InventoryUI/Hotbar" index="3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player/InventoryUI/Hotbar/Slot3" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot2" type="Panel" parent="Player/InventoryUI/Hotbar" index="4"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player/InventoryUI/Hotbar/Slot2" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BatteryLabel" type="Label" parent="Player/InventoryUI" index="1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 4
