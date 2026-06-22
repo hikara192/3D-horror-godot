@@ -22,6 +22,7 @@ const LEAN_ANGLE = 2.5
 const LEAN_SPEED = 5.0
 var current_lean: float = 0.0
 
+# Массив инвентаря на 5 слотов
 var inventory: Array[String] = ["", "", "", "", ""] 
 var active_slot_index: int = 0 
 
@@ -38,9 +39,9 @@ var default_flashlight_energy: float = 1.0
 var current_speed = WALK_SPEED
 
 @export_group('camera')
-@export var mouse_senbility: float = 0.002
-@export_range(-90.0, 0.0, 0.1, "radians_as_degrees") var min_vartical_angle: float = -PI/2
-@export_range(0.0, 90.0, 0.1, "radians_as_degrees") var max_vartical_angle: float = PI/4
+@export var mouse_sensibility: float = 0.002
+@export_range(-90.0, 0.0, 0.1, "radians_as_degrees") var min_vertical_angle: float = -PI/2
+@export_range(0.0, 90.0, 0.1, "radians_as_degrees") var max_vertical_angle: float = PI/4
 @onready var camera = $Camera3D
 
 func _ready() -> void:
@@ -53,6 +54,15 @@ func _ready() -> void:
 	if flashlight:
 		default_flashlight_energy = flashlight.light_energy
 		
+	# === ЗАГРУЗКА ИЗ ГЛОБАЛЬНОЙ ПАМЯТИ ===
+	# Если в GlobalData уже сохранен инвентарь (например, после перехода), загружаем его
+	if GlobalData.saved_inventory.size() == 5:
+		inventory = GlobalData.saved_inventory.duplicate()
+		print("[Игрок] Инвентарь успешно восстановлен: ", inventory)
+	else:
+		# Если это самый первый запуск игры, синхронизируем пустой инвентарь игрока с глобальным
+		GlobalData.saved_inventory = inventory.duplicate()
+	
 	update_inventory_ui()
 	if interaction_ray:
 		interaction_ray.add_exception(self)
@@ -63,9 +73,9 @@ func _ready() -> void:
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		rotate_y(-event.relative.x * mouse_senbility) 
-		camera.rotation.x -= event.relative.y * mouse_senbility
-		camera.rotation.x = clamp(camera.rotation.x, min_vartical_angle, max_vartical_angle)
+		rotate_y(-event.relative.x * mouse_sensibility) 
+		camera.rotation.x -= event.relative.y * mouse_sensibility
+		camera.rotation.x = clamp(camera.rotation.x, min_vertical_angle, max_vertical_angle)
 		
 	if event.is_action_pressed("toggle_mouse_capture"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -196,7 +206,12 @@ func use_active_item() -> void:
 		flashlight_battery = 100.0
 		print("Фонарик заряжен!")
 		
+		# Очищаем слот локально
 		inventory[active_slot_index] = ""
+		
+		# === СИНХРОНИЗАЦИЯ ПОСЛЕ ИСПОЛЬЗОВАНИЯ ПРЕДМЕТА ===
+		GlobalData.saved_inventory = inventory.duplicate()
+		
 		update_inventory_ui()
 		check_active_item()
 
@@ -205,6 +220,10 @@ func add_item_to_inventory(item_name: String) -> bool:
 	for i in range(inventory.size()):
 		if inventory[i] == "":
 			inventory[i] = item_name
+			
+			# === СИНХРОНИЗАЦИЯ ПОСЛЕ ПОДБОРА ПРЕДМЕТА ===
+			GlobalData.saved_inventory = inventory.duplicate()
+			
 			update_inventory_ui()
 			check_active_item()
 			return true
